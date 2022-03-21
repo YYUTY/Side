@@ -4,6 +4,10 @@
   font-family: sans-serif;
   overflow: hidden;
 }
+
+.air {
+  height:200px;
+}
 .g-recaptcha {
   margin-right:auto;
   margin-left:auto;
