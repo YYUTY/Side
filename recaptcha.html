@@ -4,8 +4,19 @@
     <meta charset="utf-8">
     <title>確認</title>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel="stylesheet" href="css/recaptcha.css">
   </head>
   <body>
-    <div class="g-recaptcha" data-callback="clearcall" data-sitekey="6LdEGPoeAAAAAMf6FzkOWYBGxxobi0BKDn6sC4mt"></div>
+    <div class="bg">
+      <div class="g-recaptcha" data-callback="clearcall" data-sitekey="6LexgfseAAAAAAEYE1MH5yLk8suxP79CqwgWpnka" style="display: block; margin: auto;"></div>
+      <h1>Almost there!</h1>
+      <script type="text/javascript">
+  　    function clearcall(code) {
+  　　    if(code!==""){
+  　　　    location = 'home.html';
+  　　    }
+  　    }
+      </script>
+    </div>
   </body>
 </html>
