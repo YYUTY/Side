@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css"/>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>SIDEにログイン</title>
+        <link rel="icon" href="icon.ico">
+        <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css"/>
+        <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
 
 
-    <script>
-      const firebaseConfig = {
-          apiKey: "AIzaSyBVlAGbp2FUJPbXBD0Js2x6LqW7QKE1Fds",
-          authDomain: "side-f02d7.firebaseapp.com",
-          projectId: "side-f02d7",
-          storageBucket: "side-f02d7.appspot.com",
-          messagingSenderId: "12856972999",
-          appId: "1:12856972999:web:3ca022414df0818e50d0e2",
-          measurementId: "G-H73Y3GHK3V"
-        };
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyBVlAGbp2FUJPbXBD0Js2x6LqW7QKE1Fds",
+                authDomain: "side-f02d7.firebaseapp.com",
+                projectId: "side-f02d7",
+                storageBucket: "side-f02d7.appspot.com",
+                messagingSenderId: "12856972999",
+                appId: "1:12856972999:web:3ca022414df0818e50d0e2",
+                measurementId: "G-H73Y3GHK3V"
+            };
 
-        firebase.initializeApp(firebaseConfig);
+            firebase.initializeApp(firebaseConfig);
 
-        let uiConfig = {
-            callbacks: {
-                signInSuccessWithAuthResult: function () {
-                    location = 'https://www.google.com';
-                    return true;
+            let uiConfig = {
+                callbacks: {
+                    signInSuccessWithAuthResult: function () {
+                        location = 'https://www.google.com';
+                        return true;
+                    },
                 },
-            },
-            signInOptions: [
-                firebase.auth.EmailAuthProvider.PROVIDER_ID,
-                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-                firebase.auth.FacebookAuthProvider.PROVIDER_ID
-            ],
-        };
+                signInOptions: [
+                    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                    firebase.auth.FacebookAuthProvider.PROVIDER_ID
+                ],
+            };
 
-        let ui = new firebaseui.auth.AuthUI(firebase.auth());
-        ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
-</head>
-<body>
-
-<div id="firebaseui-auth-container"></div>
-
-</body>
+            let ui = new firebaseui.auth.AuthUI(firebase.auth());
+            ui.start('#firebaseui-auth-container', uiConfig);
+        </script>
+    </head>
+    <body>
+      <div class="bg">
+        <img src="http://drive.google.com/uc?export=view&id=1JIPuJ_EAbce7psQx8ornABMxAuXVJrU2" alt="logo" style="display: block; margin: auto;">
+        <div id="firebaseui-auth-container"></div>
+      </div>
+    </body>
 </html>
