@@ -5,6 +5,20 @@
     <link rel="icon" href="icon.ico">
     <title>ようこそSIDEへ</title>
     <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript">
+    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+    if (requiresAuth) {
+      // 認証状態を取得
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          location = 'recaptcha.html';
+        }
+      })
+    }
+    else {
+      next();
+    }
+    </script>
   </head>
   <body>
     <header><!--https://codepen.io/Abhi7raj/pen/LYzzwXR-->
