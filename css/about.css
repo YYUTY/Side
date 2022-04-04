@@ -9,7 +9,7 @@
 .container {
   height: 100vh;
   width: 100%;
-  background: url("./img/bgimg.png");
+  background: url("./img/bgimg.jpg");
   background-position: center;
   background-size: cover;
   background-clip: border-box;
@@ -26,6 +26,19 @@
   padding: 10px 0;
 }
 
+
+.content {
+  padding: 0 4rem;
+  position: relative;
+}
+
+h2 {
+  letter-spacing: 3px;
+  color: darkorange;
+  font-size: 5rem;
+  margin-top: 9rem;
+}
+
 ul li {
   list-style-type: none;
   margin: 0 1rem;
@@ -36,9 +49,5 @@ ul li a {
   text-decoration: none;
   font-weight: 600;
   color: #fbdac8;
-  position: relative;
-}
-.content {
-  padding: 0 4rem;
   position: relative;
 }
